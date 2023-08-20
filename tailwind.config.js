@@ -5,7 +5,11 @@ module.exports = {
     fontFamily: {
       "work-sens": ["Work-Sans", "ui-sans-serif"],
     },
-    extend: {},
+    extend: {
+      colors: {
+        enable: "#E527B2",
+      },
+    },
   },
   plugins: [],
 };

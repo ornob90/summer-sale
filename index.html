@@ -17,6 +17,10 @@
     />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      .btn-enable {
+        background-color: #e527b2;
+      }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -25,11 +29,11 @@
   <body class="font-work-sens">
     <header class="bg-[#F9F6E2] w-full">
       <div
-        class="w-4/5 mx-auto py-4 max-w-[1024px] flex flex-col md:flex-row items-center justify-around gap-8 md:gap-0"
+        class="w-4/5 mx-auto py-4 max-w-[1024px] flex flex-col-reverse md:flex-row items-center justify-around gap-8 md:gap-0"
       >
         <!--Header Content -->
         <div
-          class="flex flex-col items-center gap-8 md:w-[40%] justify-center text-center"
+          class="flex flex-col items-center gap-8 md:w-[40%] justify-center text-center pb-16"
         >
           <p class="text-2xl font-[500]">--SALE FEVER--</p>
           <h1 class="text-3xl lg:text-4xl font-[700]">
@@ -53,6 +57,7 @@
 
     <main class="w-4/5 max-w-[1024px] mx-auto mt-16 mb-4">
       <div
+        id="product-lists"
         class="flex flex-col items-center justify-between gap-4 lg:items-start lg:flex-row"
       >
         <!-- Product List Section (Left)-->
@@ -66,7 +71,7 @@
             <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
               <!--Product Card 1-->
               <div
-                class="flex flex-col items-center justify-center p-5 border shadow-sm"
+                class="flex flex-col items-center justify-center p-5 border shadow-sm product"
               >
                 <!--Card img-->
                 <div
@@ -95,7 +100,7 @@
 
               <!--Product Card 2-->
               <div
-                class="flex flex-col items-center justify-center p-5 border shadow-sm"
+                class="flex flex-col items-center justify-center p-5 border shadow-sm product"
               >
                 <!--Card img-->
                 <div
@@ -124,7 +129,7 @@
 
               <!--Product Card 3-->
               <div
-                class="flex flex-col items-center justify-center p-5 border shadow-sm"
+                class="flex flex-col items-center justify-center p-5 border shadow-sm product"
               >
                 <!--Card img-->
                 <div
@@ -145,7 +150,7 @@
                   </div>
                   <!-- Card info -->
                   <div class="text-center">
-                    <p class="font-[600]">K. Accessories</p>
+                    <p class="font-[600]">Home Cooker</p>
                     <p class="text-gray-500"><span class="">49.00</span>Tk</p>
                   </div>
                 </div>
@@ -163,7 +168,7 @@
             <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
               <!--Product Card 1-->
               <div
-                class="flex flex-col items-center justify-center p-5 border shadow-sm"
+                class="flex flex-col items-center justify-center p-5 border shadow-sm product"
               >
                 <!--Card img-->
                 <div
@@ -192,7 +197,7 @@
 
               <!--Product Card 2-->
               <div
-                class="flex flex-col items-center justify-center p-5 border shadow-sm"
+                class="flex flex-col items-center justify-center p-5 border shadow-sm product"
               >
                 <!--Card img-->
                 <div
@@ -221,7 +226,7 @@
 
               <!--Product Card 3-->
               <div
-                class="flex flex-col items-center justify-center p-5 border shadow-sm"
+                class="flex flex-col items-center justify-center p-5 border shadow-sm product"
               >
                 <!--Card img-->
                 <div
@@ -258,7 +263,7 @@
             <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
               <!--Product Card 1-->
               <div
-                class="flex flex-col items-center justify-center p-5 border shadow-sm"
+                class="flex flex-col items-center justify-center p-5 border shadow-sm product"
               >
                 <!--Card img-->
                 <div
@@ -287,7 +292,7 @@
 
               <!--Product Card 2-->
               <div
-                class="flex flex-col items-center justify-center p-5 border shadow-sm"
+                class="flex flex-col items-center justify-center p-5 border shadow-sm product"
               >
                 <!--Card img-->
                 <div
@@ -316,7 +321,7 @@
 
               <!--Product Card 3-->
               <div
-                class="flex flex-col items-center justify-center p-5 border shadow-sm"
+                class="flex flex-col items-center justify-center p-5 border shadow-sm product"
               >
                 <!--Card img-->
                 <div
@@ -350,7 +355,8 @@
         <div class="w-full p-4 mt-16 border lg:w-max h-max">
           <!--Coupon Div-->
           <div class="">
-            <p>Have a coupon ?</p>
+            <p class="font-[500]">Have coupon ?</p>
+
             <div class="flex">
               <!-- <input
                 type="text"
@@ -358,49 +364,99 @@
                 class="w-full max-w-xs px-3 border border-r-0 rounded-l-lg focus:border-white focus:border-none"
               /> -->
               <input
+                id="coupon-code"
                 type="text"
                 placeholder="Coupon code"
                 class="w-full max-w-xs px-3 border border-r-0 rounded-l-lg focus:border-none"
               />
+
               <button
-                class="px-4 py-2 text-white border bg-[#E527B2] rounded-r-md"
+                disabled
+                type="button"
+                id="btn-apply"
+                class="px-4 py-2 text-white bg-pink-400 border rounded-r-md"
               >
                 Apply
               </button>
 
               <!--Product names List-->
             </div>
-            <ol class="pt-12 pb-2 list-decimal border-b">
-              <li class="font-[500] text-md ml-4">Home Cooker</li>
-              <li class="font-[500] text-md ml-4">Home Cooker</li>
-              <li class="font-[500] text-md ml-4">Home Cooker</li>
-            </ol>
+
+            <ol class="pt-12 pb-2 list-decimal border-b" id="cart"></ol>
 
             <div class="py-2 border-b">
               <p>
                 <span class="font-[500]">Total price:</span>
-                <span class="text-gray-500">0Tk</span>
+                <span class="text-gray-500">
+                  <span id="total-price">0</span>TK
+                </span>
               </p>
 
               <p>
                 <span class="font-[500]">Discount:</span>
-                <span class="text-gray-500">0Tk</span>
+                <span class="text-gray-500">
+                  <span class="text-gray-500" id="discount">0</span>TK
+                </span>
               </p>
 
               <p>
                 <span class="font-[500]">Total:</span>
-                <span class="text-gray-500">0Tk</span>
+                <span class="text-gray-500">
+                  <span class="text-gray-500" id="total">0</span>TK
+                </span>
               </p>
             </div>
+            <div class="w-full mt-4">
+              <label
+                id="make-purchase-btn"
+                for="my_modal_6"
+                class="px-[30%] md:px-[40%] lg:px-[30%] py-2 mt-4 text-white bg-pink-400 rounded-md"
+              >
+                Make Purchase
+              </label>
 
-            <button
-              class="w-full lg:w-max px-4 py-2 mt-4 text-white border bg-[#E527B2] rounded-r-md"
-            >
-              Make Purchase
-            </button>
+              <input
+                type="checkbox"
+                id="my_modal_6"
+                class="modal-toggle"
+                disabled
+              />
+              <div class="mt-4 modal">
+                <div class="modal-box">
+                  <div
+                    class="flex flex-col items-center justify-center w-full gap-8"
+                  >
+                    <div>
+                      <img src="./images/congo.png" alt="" />
+                    </div>
+
+                    <!-- Modal Content -->
+
+                    <div class="space-y-4 text-center">
+                      <h1 class="font-[700] text-4xl">Congratulations</h1>
+                      <p class="text-sm text-gray-500">
+                        You Purchase the product
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex justify-center modal-action">
+                    <label
+                      id="go-home"
+                      for="my_modal_6"
+                      class="px-4 py-2 mt-4 text-white bg-[#E527B2] rounded-md"
+                      >Go Home</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <!-- The button to open modal -->
         </div>
       </div>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
